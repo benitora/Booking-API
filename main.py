@@ -8,8 +8,8 @@ from fastapi.responses import JSONResponse
 
 from pydantic import BaseModel # New import
 
-# from routers import rooms
-# from routers import authen
+# from .routers import rooms
+from .routers import authen
 
 app = FastAPI()
 
