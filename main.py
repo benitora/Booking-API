@@ -28,13 +28,13 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
                 "message": {"Oops! Something Went Wrong "}}),
     )
 
-router = APIRouter(        #กำหนด instance
-    responses={            #response กรณีที่ค้นหาไม่เจอ
-        404 : {
-            'message': 'Not Found'
-        }
-    }
-)
+# router = APIRouter(        #กำหนด instance
+#     responses={            #response กรณีที่ค้นหาไม่เจอ
+#         404 : {
+#             'message': 'Not Found'
+#         }
+#     }
+# )
 
 # New
 book_db = [
