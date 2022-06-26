@@ -1,8 +1,8 @@
 
 from fastapi import APIRouter
+from fastapi.params import Depends
 
 from config.database import engine, SessionLocal
-from fastapi.params import Depends
 from sqlalchemy.orm import Session
 
 from modules import rooms
