@@ -1,4 +1,4 @@
-#<project>/modules/rooms/rooms.py
+#<project>/modules/rooms.py
 from sqlalchemy.orm import Session
 import logging
 

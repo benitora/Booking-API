@@ -7,10 +7,9 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
 from pydantic import BaseModel # New import
-from fastapi import APIRouter
 
-from routers import rooms
-from routers import authen
+# from routers import rooms
+# from routers import authen
 
 app = FastAPI()
 
@@ -83,13 +82,13 @@ async def root():
 #     book_db.append(book.dict())
 #     return book_db[-1]
 
-def config_router():                  #สร้างฟังก์ชันขึ้นมาเพื่อ include router ฟังก์ชันชื่ออะไรก็ได้
-    app.include_router(authen.router)
-    app.include_router(rooms.router)
+# def config_router():                  #สร้างฟังก์ชันขึ้นมาเพื่อ include router ฟังก์ชันชื่ออะไรก็ได้
+#     app.include_router(authen.router)
+#     app.include_router(rooms.router)
     
 
-config_router()
+# config_router()
 
 if __name__ == '__main__':
     # uvicorn.run(app, host="0.0.0.0", port=8888, debug=True)
-    uvicorn.run(app, debug=True)
+    uvicorn.run(app,port=8888, debug=True)
